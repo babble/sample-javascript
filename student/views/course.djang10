@@ -1,4 +1,4 @@
-{% extends "/local/views/base" %}
+{% extends "base" %}
 
 {% block "content" %}
 

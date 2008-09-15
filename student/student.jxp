@@ -5,7 +5,7 @@ var data = {};
 if ( request.action == "list" ){
     data.ss = Student.find().limit( 50 ).sort( { name : 1 } );
     
-    local.views.students( data );
+    __path__.views.students( data );
 }
 else {
     var myStudent = Student.findOne( request.s__id , true );
@@ -47,7 +47,7 @@ else {
     
     data.s = myStudent;
     
-    local.views.student( data );
+    __path__.views.student( data );
 }
 
 

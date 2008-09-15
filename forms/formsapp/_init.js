@@ -1,4 +1,4 @@
 core.db.modelBase();
-local.formsapp.models();
+__path__.models();
 
-djang10.addTemplateRoot(local.formsapp.templates);
+djang10.addTemplateRoot(__path__.templates);

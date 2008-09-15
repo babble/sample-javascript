@@ -1,5 +1,5 @@
-urlpatterns = [[/user/, 'local.formsapp.views.user_view'],
-               [/musician/, 'local.formsapp.views.musician'],
-               [/event/, 'local.formsapp.views.event'],
-               [/transaction/, 'local.formsapp.views.transaction'],
-               [/.*/, 'local.formsapp.views.index']];
+urlpatterns = [[/user/, '__path__.formsapp.views.user_view'],
+               [/musician/, '__path__.formsapp.views.musician'],
+               [/event/, '__path__.formsapp.views.event'],
+               [/transaction/, '__path__.formsapp.views.transaction'],
+               [/.*/, '__path__.formsapp.views.index']];

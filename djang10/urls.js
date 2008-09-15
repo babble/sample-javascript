@@ -1,1 +1,1 @@
-urlpatterns = { index: [/.*/, 'local.counterapp.views.index'] };
+urlpatterns = { index: [/.*/, '__path__.counterapp.views.index'] };

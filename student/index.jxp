@@ -1,1 +1,1 @@
-<% local.views.base(); %>
+<% __path__.views.base(); %>

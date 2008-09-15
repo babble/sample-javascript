@@ -3,7 +3,7 @@
 var data = {};
 
 data.cs = Course.find().limit( 100 ).sort( { name : 1 } );
-template = local.views.courses;
+template = __path__.views.courses;
 
 if ( request.c__id ){
     data.c = Course.findOne( request.c__id );
@@ -31,7 +31,7 @@ else if ( request.action == "New" ){
 
 if ( data.c ){
     data.c._form = new Forms.Form( data.c , "c_" );
-    template = local.views.course;
+    template = __path__.views.course;
     
 }
 
