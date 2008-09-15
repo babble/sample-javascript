@@ -1,0 +1,5 @@
+Hi from the sample djang10 app!
+
+This page has been hit {{ count.get }} times.
+
+

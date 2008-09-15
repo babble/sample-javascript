@@ -1,0 +1,18 @@
+<project default="test">
+    <target name="test">
+        <webtest name="Test that the counter is working">
+            <invoke url="${site}"/>
+            <verifyText text="Hi from the sample djang10 app!"/>
+            <verifyText text="This page has been hit 0 times."/>
+            <invoke url="${site}"/>
+            <verifyText text="Hi from the sample djang10 app!"/>
+            <verifyText text="This page has been hit 1 times."/>
+            <invoke url="${site}"/>
+            <verifyText text="Hi from the sample djang10 app!"/>
+            <verifyText text="This page has been hit 2 times."/>
+            <invoke url="${site}"/>
+            <verifyText text="Hi from the sample djang10 app!"/>
+            <verifyText text="This page has been hit 3 times."/>
+        </webtest>
+    </target>    
+</project>
