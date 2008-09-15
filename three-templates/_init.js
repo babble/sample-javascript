@@ -5,8 +5,12 @@
 data = {};
 data.count = 0;
 
+three_templates_site_root = "/three-templates";
+
 // do this only if the site is running standalone.
 if (__path__ == null) {
+	site_root = "";
+
 	// this is a rather brutal mapper - every request goes to our controller.  Note that
 	// right now, this must be a jxp file, rather than a plain js
 	mapUrlToJxpFile = function (uri) {

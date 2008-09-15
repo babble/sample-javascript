@@ -1,1 +1,1 @@
-<% __path__.views.base(); %>
+<% __path__.views.base({site_root: student_site_root}); %>

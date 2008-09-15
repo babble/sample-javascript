@@ -17,10 +17,14 @@ if (__path__) {
 
 core.core.routes();
 
-// setup routing
+student_site_root = "/student";
+if (__path__ == null) {
+	student_site_root = "";
 
-routes = new Routes();
+	// setup routing
+	routes = new Routes();
 
-routes.student = "/student.jxp";
-routes.add( "students" , "/student.jxp" , { extra : { action : "list" } } );
-routes.add( "courses" , "course" , { extra : { action : "list" } } );
+	routes.student = "/student.jxp";
+	routes.add( "students" , "/student.jxp" , { extra : { action : "list" } } );
+	routes.add( "courses" , "course" , { extra : { action : "list" } } );
+}

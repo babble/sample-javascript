@@ -15,8 +15,8 @@
     <td>{{ s.name }} </td>
     <td>{{ s.email }} </td>
     <td>{{ s.scores.length }} </td>
-    <td><a href="/student?s__id={{ s._id }}">edit</a></td>
-    <td><a href="/student?action=Delete&s__id={{ s._id }}">delete</a></td>
+    <td><a href="{{ site_root }}/student?s__id={{ s._id }}">edit</a></td>
+    <td><a href="{{ site_root }}/student?action=Delete&s__id={{ s._id }}">delete</a></td>
   </tr>
   {% endfor %}
   
@@ -24,6 +24,6 @@
 
 <br>
 
-<a href="/student">New Student</a>
+<a href="{{ site_root }}/student">New Student</a>
 
 {% endblock %}

@@ -16,7 +16,7 @@ data.count += 1;
 // templating options in 10gen.  We recommend using the djang10 templates,
 // modeled after the Django template system
 
-__path__.templates.template1({theCount: data.count})
+__path__.templates.template1({theCount: data.count, site_root: three_templates_site_root})
 __path__.templates.template2({countThis: data.count})
 __path__.templates.template3({countThat: data.count})
 %>

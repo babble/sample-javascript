@@ -1,6 +1,6 @@
 <% 
 
-var data = {};
+var data = {site_root: student_site_root};
 
 if ( request.action == "list" ){
     data.ss = Student.find().limit( 50 ).sort( { name : 1 } );

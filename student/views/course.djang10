@@ -6,7 +6,7 @@
 
 <h3>Course Editing</h3>
 
-<form action="/course" method="POST" >
+<form action="{{ site_root }}/course" method="POST" >
 
   <fieldset>  
   {% if not c._id %}

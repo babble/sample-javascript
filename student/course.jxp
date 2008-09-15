@@ -1,6 +1,6 @@
 <%
 
-var data = {};
+var data = {site_root: student_site_root};
 
 data.cs = Course.find().limit( 100 ).sort( { name : 1 } );
 template = __path__.views.courses;

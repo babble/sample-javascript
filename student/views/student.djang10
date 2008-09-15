@@ -6,7 +6,7 @@
 
 <h3>Student Editing</h3>
 
-<form action="/student" method="POST" >
+<form action="{{ site_root }}/student" method="POST" >
 
   <fieldset>  
   {% if not s._id %}
