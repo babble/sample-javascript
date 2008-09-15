@@ -1,0 +1,37 @@
+<html>
+  <head>
+	<title>10gen JavaScript Samples</title>
+  </head>
+  <body>
+	<h2>JavaScript Samples</h2>
+	<p>
+	  There are several Javascript samples to choose from:
+	  <dl>
+		<dt>
+		  <a href="three-templates/">three-templates</a>
+		</dt>
+		<dd>
+		  10gen's version of "hello world"
+		</dd>
+		<dt>
+		  <a href="student/">student</a>
+		</dt>
+		<dd>
+		  A web app showing more advanced usage of 10gen
+		</dd>
+		<dt>
+		  <a href="djang10/">djang10</a>
+		</dt>
+		<dd>
+		  A web app showing the use of 10gen's <a href="http://www.10gen.com/wiki/Djang10">Djang10</a> framework.
+		</dd>
+		<dt>
+		  <a href="forms/">forms</a>
+		</dt>
+		<dd>
+		  Another Djang10 web app. This one makes use of the Djang10 forms library.
+		</dd>
+	  </dl>
+	</p>
+  </body>
+</html>

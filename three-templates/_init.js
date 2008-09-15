@@ -5,15 +5,18 @@
 data = {};
 data.count = 0;
 
-// this is a rather brutal mapper - every request goes to our controller.  Note that
-// right now, this must be a jxp file, rather than a plain js
-function mapUrlToJxpFile (uri) {
-	// allow any request for a static asset to be just handled
-	// by the appserver
-    if (uri.match(/^\/assets\//)) {
-         return null;
-    }
+// do this only if the site is running standalone.
+if (__path__ == null) {
+	// this is a rather brutal mapper - every request goes to our controller.  Note that
+	// right now, this must be a jxp file, rather than a plain js
+	mapUrlToJxpFile = function (uri) {
+		// allowed any request for a static asset to be just handled
+		// by the appserver
+		if (uri.match(/^\/assets\//)) {
+			return null;
+		}
 
-    // otherwise, just always return our "controller"
-    return "controller.jxp";
+		// otherwise, just always return our "controller"
+		return "controller.jxp";
+	};
 }
