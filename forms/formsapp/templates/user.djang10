@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>User Form</title>
+    </head>
+    <body>
+        <h2>The Submitted Data is Valid</h2>
+        <h3>The form's cleaned_data:</h3>
+        <ul>
+            <li>Email: {{ form.cleaned_data.email }}</li>
+            <li>Password: {{ form.cleaned_data.password }}</li>
+            <li>Second Password: {{ form.cleaned_data.password2 }}</li>
+            <li>First name: {{ form.cleaned_data.first_name }}</li>
+            <li>Last name: {{ form.cleaned_data.last_name }}</li>            
+            <li>Birthdate: {{ form.cleaned_data.birthdate }}</li>
+        </ul>
+    </body>
+</html>

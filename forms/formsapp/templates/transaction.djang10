@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Transaction Form</title>
+    </head>
+    <body>
+        <h2>The Submitted Data is Valid</h2>
+        <h3>The form's cleaned_data:</h3>
+        <ul>
+            <li>Product ID: {{ form.cleaned_data.product_ID }}</li>
+            <li>Price / Unit: {{ form.cleaned_data.price_per_unit }}</li>            
+            <li>Number of units: {{ form.cleaned_data.number_of_units }}</li>
+        </ul>
+    </body>
+</html>

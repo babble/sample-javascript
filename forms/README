@@ -1,0 +1,5 @@
+A sample site showing the use of 10gen's implementation of the Django forms
+library in our Djang10 framework. It shows:
+
+	* The use of Djang10 forms in a 10gen site
+	* The use of other Djang10 constructs (see the djang10 sample site for more)

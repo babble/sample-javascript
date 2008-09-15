@@ -1,0 +1,40 @@
+<project default="test">
+    <target name="test">
+        <webtest name="Fill out the form with valid data">
+            <invoke url="${site}"/>
+            <xMatch text="UserForm"/>
+            <setInputField formName="user-form" name="email" value="test@example.com"/>
+            <setInputField name="password" value="pass"/>
+            <setInputField name="password2" value="pass"/>
+            <setInputField name="first_name" value="John"/>
+            <setInputField name="last_name" value="Doe"/>
+            <setInputField name="birthdate" value="January 1 1980"/>
+            <clickButton label="Create User"/>
+            <xMatch text="The Submitted Data is Valid"/>
+            <xMatch text="Email: test@example.com"/>
+            <xMatch text="Password: pass"/>
+            <xMatch text="First name: John"/>
+            <xMatch text="Last name: Doe"/>
+            <xMatch text="Birthdate: Tue Jan 01 1980"/>
+        </webtest>
+        <webtest name="Fill out the form with invalid data">
+            <invoke url="${site}"/>
+            <xMatch text="UserForm"/>
+            <setInputField formName="user-form" name="email" value="test@invalid"/>
+            <setInputField name="password" value="pass"/>
+            <setInputField name="password2" value="pass2"/>
+            <setInputField name="first_name" value=""/>
+            <setInputField name="last_name" value="D3oe"/>
+            <setInputField name="birthdate" value="Febtober 1 1980"/>
+            <clickButton label="Create User"/>
+            <not>
+                <xMatch text="The Submitted Data is Valid"/>
+            </not>
+            <xMatch text="Enter a valid e-mail address."/>
+            <xMatch text="This field is required."/>
+            <xMatch text="Name can only contain normal characters"/>
+            <xMatch text="Enter a valid date."/>
+            <xMatch text="Please make sure your passwords match."/>
+        </webtest>
+    </target>
+</project>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Event Form</title>
+    </head>
+    <body>
+        <h2>The Submitted Data is Valid</h2>
+        <h3>The form's cleaned_data:</h3>
+        <ul>
+            <li>Title: {{ form.cleaned_data.title }}</li>
+            <li>Description: {{ form.cleaned_data.description }}</li>
+            <li>Date: {{ form.cleaned_data.date }}</li>
+            <li>URL: {{ form.cleaned_data.URL }}</li>
+            <li>File: {{ form.cleaned_data.file_upload.filename }}</li>
+            <li>All day: {{ form.cleaned_data.all_day }}</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<project default="test">
+    <target name="test">
+        <webtest name="Make sure the index page looks right">
+            <invoke url="${site}"/>
+            <xMatch text="Djang10 Forms Demos"/>
+            <xMatch text='A Basic "Event" Form'/>
+            <xMatch text="UserForm"/>
+            <xMatch text="MusicianForm"/>
+            <not>
+                <xMatch text="This shouldn't be there"/>
+            </not>
+        </webtest>
+    </target>    
+</project>

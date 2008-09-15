@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Djang10 Forms Demos</title>
+    </head>
+    <body>
+        <h1>Djang10 Forms Demos</h1>
+        <p>These are some demos of how to create, render, and validate forms
+            using djang10. View the source code for this site to see how it 
+            works (especially forms.js and the associated views in views.js).
+            You also might want to check out the test cases in 
+            core.modules.djang10.test.test_forms_forms.js and the documentation from 
+            <a href="http://www.djangoproject.com/documentation/forms/">Django</a>,
+            the project on which this was based.</p>
+        <h2>A Basic "Event" Form</h2>
+        <p>This is a simple form representing an event. It has a title,
+            description, date and time, and an optional url or file upload
+            associated with it. It also has a checkbox allowing the user to 
+            specify if the event is an all-day event or not. Try submitting
+            it with empty or weird / incorrect values. Then try submitting it 
+            with sane values. Note how the form handles all validation and 
+            error display.</p>
+        <!-- Note, we need to use enctype="multipart/form-data" here since our
+            form has an optional file upload. -->
+        <form name="event-form" action="event" method="POST" enctype="multipart/form-data">
+            <table>
+                {{ event_form }}
+            </table>
+            <p><input type="submit" value="Create Event" /></p>
+        </form>
+      
+        <h2>Form Inheritance</h2>
+        <p>Here we have two forms: UserForm and MusicianForm. Both of these 
+            forms inherit from the base form PersonForm, where they get
+            their name and birthdate fields. The User form adds an email 
+            field and two password fields. It also demonstrates the use of a 
+            custom validator to ensure that the passwords match. The Musician
+            form adds a ChoiceField to select the instrument. We also display
+            the MusicianForm using the as_ul method.</p>
+        <form name="musician-form" style="width: 50%; float: right;" action="musician" method="POST">
+            <h3>MusicianForm</h3>
+            <ul>
+                {{ musician_form.as_ul }}
+            </ul>
+            <p><input type="submit" value="Create Musician" /></p>
+        </form>
+        <form name="user-form" style="width: 50%;" action="user" method="POST">
+            <h3>UserForm</h3>
+            <table>
+                <!-- Using as_table is the same as just printing the form. -->
+                {{ user_form.as_table }}
+            </table>
+            <p><input type="submit" value="Create User" /></p>
+        </form>  
+        <h2>Forms with Prefixes</h2>
+        <p>This is one final demo that displays using the as_p method. It
+            shows the use of IntegerField and DecimalField, as well as the use
+            of a form prefix. Prefixes can be useful when multiple forms are
+            being populated with the same data and you want to use a single
+            field name in both forms.</p>
+        <form name="transaction-form" action="transaction" method="POST">
+            {{ transaction_form.as_p }}
+            <p><input type="submit" value="Create Transaction" /></p>
+        </form>
+    </body>
+</html>

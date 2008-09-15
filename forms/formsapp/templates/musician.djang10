@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Musician Form</title>
+    </head>
+    <body>
+        <h2>The Submitted Data is Valid</h2>
+        <h3>The form's cleaned_data:</h3>
+        <ul>
+            <li>First name: {{ form.cleaned_data.first_name }}</li>
+            <li>Last name: {{ form.cleaned_data.last_name }}</li>            
+            <li>Birthdate: {{ form.cleaned_data.birthdate }}</li>
+            <li>Instrument: {{ form.cleaned_data.instrument }}</li>
+        </ul>
+    </body>
+</html>
