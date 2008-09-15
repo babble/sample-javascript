@@ -4,5 +4,8 @@ If you're just starting with 10gen you should look at the "three-templates"
 site first. After understanding that look at the "student" site next, which
 gives a more thorough look at developing a web app on 10gen.
 
+"djang10" shows the use of 10gen's Djang10 JavaScript framework, and "forms"
+extends upon that by demo-ing our implementation of the Django forms library.
+
 Tutorial documentation can also be reached from our main developer documentation
 page, here: http://www.10gen.com/wiki/DevDocumentation
