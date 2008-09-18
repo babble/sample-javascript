@@ -1,0 +1,16 @@
+<%
+__path__.formsapp.views();
+
+// call the appropriate view based on the requested_url parameter
+if (request.requested_url === 'event') {
+   Views.event();
+} else if (request.requested_url === 'user') {
+   Views.user_view();
+} else if (request.requested_url === 'musician') {
+	Views.musician();
+} else if (request.requested_url === 'transaction') {
+	Views.transaction();
+} else {
+	Views.index();
+}
+%>
