@@ -20,16 +20,10 @@
 		  A web app showing more advanced usage of 10gen
 		</dd>
 		<dt>
-		  <a href="djang10/">djang10</a>
-		</dt>
-		<dd>
-		  A web app showing the use of 10gen's <a href="http://www.10gen.com/wiki/Djang10">Djang10</a> framework.
-		</dd>
-		<dt>
 		  <a href="forms/">forms</a>
 		</dt>
 		<dd>
-		  Another Djang10 web app. This one makes use of the Djang10 forms library.
+		  A web app making use of the Djang10 forms library.
 		</dd>
 	  </dl>
 	</p>

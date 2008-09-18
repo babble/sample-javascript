@@ -6,4 +6,3 @@ var routes = Routes.create();
 local['three-templates'].foo;
 local.student.foo;
 local.forms.foo;
-//local.djang10.foo;
