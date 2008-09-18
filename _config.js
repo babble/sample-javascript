@@ -1,0 +1,4 @@
+version = {
+	corejs: 'master'
+};
+
