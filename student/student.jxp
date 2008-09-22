@@ -1,36 +1,36 @@
-<% 
+<%
 
 var data = {site_root: student_site_root};
 
 if ( request.action == "list" ){
     data.ss = Student.find().limit( 50 ).sort( { name : 1 } );
-    
+
     __path__.views.students( data );
 }
 else {
     var myStudent = Student.findOne( request.s__id , true );
-    
+
     if ( request.action == "Delete" ){
         myStudent.remove();
-        response.sendRedirectTemporary( "/students" );
+        response.sendRedirectTemporary( student_site_root + "/students" );
         return;
     }
-    
+
     data.courses = Course.find().toArray();
 
     if ( request.action == "Save" ){
-        
+
         Forms.fillInObject( "s_" , myStudent , request );
-        
+
         if ( myStudent._new ){
             delete myStudent._new;
         }
-        
+
         myStudent.save();
         data.msg = "Saved";
-        
+
     }
-    
+
     if ( request.action == "Add" && request.course_for ){
         var c = Course.findOne( request.course_for );
         if ( ! c ){
@@ -42,14 +42,14 @@ else {
         }
         // TODO
     }
-    
+
     myStudent._form = new Forms.Form( myStudent , "s_" );
-    
+
     data.s = myStudent;
-    
+
     __path__.views.student( data );
 }
 
 
-   
+
 %>
