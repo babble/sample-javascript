@@ -8,7 +8,7 @@ data = {};
 data.count = 0;
 
 // set up routing
-var routes = Routes.create();
+var routes = Routes.create(local.$);
 
 // assets don't get mapped, but everything else gets mapped to 'controller', in our case 'controller.jxp'
 routes.add(/^\/assets/, null);

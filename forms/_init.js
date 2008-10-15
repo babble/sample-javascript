@@ -1,6 +1,6 @@
 core.core.routes();
 
-var routes = Routes.create();
+var routes = Routes.create(local.$);
 
 // send every request to the controller, which will call appropriate views based on the requested url
 routes.add("/", "controller", {extra: {requested_url: ""}});
